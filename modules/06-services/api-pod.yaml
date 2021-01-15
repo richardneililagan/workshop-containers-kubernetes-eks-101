@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mark
+  labels:
+    name: mark
+    app: api
+spec:
+  containers:
+  - name: mark
+    image: richardneililagan/06
+    ports:
+      - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hideo
+  labels:
+    name: hideo
+    app: api
+spec:
+  containers:
+  - name: hideo
+    image: richardneililagan/06
+    ports:
+      - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: seojoon
+  labels:
+    name: seojoon
+    app: api
+spec:
+  containers:
+  - name: seojoon
+    image: richardneililagan/06
+    ports:
+      - containerPort: 8080

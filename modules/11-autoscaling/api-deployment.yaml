@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: api-deployment
+  labels:
+    app: api
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api-container
+          image: us.gcr.io/k8s-artifacts-prod/hpa-example
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 250m

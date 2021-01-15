@@ -1,0 +1,28 @@
+# :: To create this cluster, save this manifest on your machine,
+#    then use `eksctl` to apply it to your AWS account.
+#
+#    ```
+#    eksctl create cluster -f ./cluster.yaml
+#    ```
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eks-workshopper
+  region: ap-southeast-1
+  version: '1.18'
+
+availabilityZones:
+  - ap-southeast-1a
+  - ap-southeast-1b
+  - ap-southeast-1c
+
+managedNodeGroups:
+  - name: default-ng
+    desiredCapacity: 3
+
+cloudWatch:
+  clusterLogging:
+    enableTypes:
+      - '*'
