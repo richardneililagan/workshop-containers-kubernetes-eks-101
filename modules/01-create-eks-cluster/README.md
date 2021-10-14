@@ -18,11 +18,11 @@ kind: ClusterConfig
 metadata:
   name: eks-workshopper  # :: change the cluster name as you please
   region: ap-southeast-1 # :: make sure your region is correct
-  version: '1.18'
+  version: '1.21'
 
 # :: make sure your availability zones match your region
 availabilityZones:
-  - ap-southeast-1a 
+  - ap-southeast-1a
   - ap-southeast-1b
   - ap-southeast-1c
 
